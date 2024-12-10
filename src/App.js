@@ -16,7 +16,7 @@ const App = () => {
     {
       title: "Stranger Things",
       description: "Supernatural adventures.",
-      posterURL: "https://m.media-amazon.com/images/M/MV5BMjE2N2MyMzEtNmU5NS00OTI0LTlkNTMtMWM1YWYyNmU4NmY0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      posterURL: "https://www.ecranlarge.com/content/uploads/2023/08/49wjfen0moxb9ipfgn8aiqmgskd-611.jpg",
       rating: 4,
     },
     {
@@ -58,7 +58,7 @@ const App = () => {
     {
       title: "The Last of Us",
       description: "Survivors navigate a post-apocalyptic world filled with danger.",
-      posterURL: "https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg",
+      posterURL: "https://www.metalopolis.net/files/Articles/Big/2023/thumbb_9839_06543950-e2af-4a32-8982-27f5e8666f2b.jpg",
       rating: 5,
     },
     {
