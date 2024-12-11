@@ -144,10 +144,11 @@ const App = () => {
       movies.filter(
         (movie) =>
           movie.title.toLowerCase().includes(filter.title.toLowerCase()) &&
-          (filter.rating ? movie.rating >= parseInt(filter.rating) : true)
+          (filter.rating !== "" ? movie.rating === parseInt(filter.rating) : true) 
       )
     );
   };
+  
 
   const handleAddMovie = () => {
     if (newMovie.title && newMovie.description && newMovie.posterURL && newMovie.rating) {
@@ -224,11 +225,11 @@ const App = () => {
               <Form.Label>Rating</Form.Label>
               <Form.Control
                 type="number"
-                min="1"
+                min="0"
                 max="5"
                 value={newMovie.rating}
                 onChange={(e) => setNewMovie({ ...newMovie, rating: e.target.value })}
-                placeholder="Enter movie rating (1 to 5)"
+                placeholder="Enter movie rating "
               />
             </Form.Group>
           </Form>

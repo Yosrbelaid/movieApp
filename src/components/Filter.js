@@ -6,8 +6,14 @@ const Filter = ({ handleFilter }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFilter({ ...filter, [name]: value });
-    handleFilter({ ...filter, [name]: value });
+    let updatedValue = value;
+
+    if (name === "rating") {
+      updatedValue = Math.min(5, Math.max(0, value)); 
+    }
+
+    setFilter({ ...filter, [name]: updatedValue });
+    handleFilter({ ...filter, [name]: updatedValue });
   };
 
   return (
@@ -25,6 +31,8 @@ const Filter = ({ handleFilter }) => {
         name="rating"
         value={filter.rating}
         onChange={handleChange}
+        min="0"
+        max="5"
       />
       <Button variant="primary" onClick={() => handleFilter(filter)}>
         Filter
@@ -34,3 +42,4 @@ const Filter = ({ handleFilter }) => {
 };
 
 export default Filter;
+
